@@ -23,12 +23,12 @@ namespace SimpleSingleton
         private static void SayFirstCallerMessage()
         {
             Singleton firstCaller = Singleton.GetInstance;
-            firstCaller.SayMessage("From Teacher");
+            firstCaller.SayMessage("Hi! This is first caller");
         }
         private static void SaySecondCallerMessage()
         {
             Singleton secondCaller = Singleton.GetInstance;
-            secondCaller.SayMessage("From Student");
+            secondCaller.SayMessage("Hi! This is second caller");
         }
     }
 }
