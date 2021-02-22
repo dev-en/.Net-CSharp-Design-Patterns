@@ -8,15 +8,28 @@ namespace RealTimeSingleton
     {
         static void Main(string[] args)
         {
+            //Parallel.For(1, 3, (i) =>
+            //{
+            //    Console.WriteLine($"request no {i} started");
+            //    Parallel.Invoke(
+            //        () => CallFirstTenantDb(),
+            //        () => CallSecondTenantDb()
+            //        );
+            //    Console.WriteLine($"request no {i} completed");
+            //});
             //First call for both tenant db
+            Console.WriteLine("Enter a key to send first request");
+            Console.ReadLine();
             Console.WriteLine("First request started");
             Parallel.Invoke(
                 () => CallFirstTenantDb(),
                 () => CallSecondTenantDb()
                 );
             Console.WriteLine("First request completed");
-            Console.ReadLine();
+            Console.WriteLine();
 
+            Console.WriteLine("Enter a key to send second request");
+            Console.ReadLine();
             //Subseaquent call for both tenant db
             Console.WriteLine("Second request started");
             Parallel.Invoke(

@@ -9,7 +9,7 @@ namespace RealTimeSingleton
     {
         public static MultitenantDb CallTenantDb(string tenant)
         {
-            Thread.Sleep(3000);
+            Thread.Sleep(5000);
             MultitenantDb multitenantDb = new MultitenantDb()
             {
                 UserName = $"UserName{tenant}",
