@@ -8,17 +8,17 @@ namespace DoubleCheckLazySingleton
         static void Main(string[] args)
         {
             Parallel.Invoke(
-                () => SayFirstCallerMessage(),
-                () => SaySecondCallerMessage()
+                () => GetFirstMessage(),
+                () => GetSecondMessage()
                 );
             Console.ReadLine();
         }
-        private static void SayFirstCallerMessage()
+        private static void GetFirstMessage()
         {
             Singleton firstCaller = Singleton.GetInstance;
             firstCaller.SayMessage("Hi! This is first caller");
         }
-        private static void SaySecondCallerMessage()
+        private static void GetSecondMessage()
         {
             Singleton secondCaller = Singleton.GetInstance;
             secondCaller.SayMessage("Hi! This is second caller");
