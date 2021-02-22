@@ -8,7 +8,7 @@ namespace RealTimeSingleton
     {
         static void Main(string[] args)
         {
-            //First call
+            //First call for both tenant db
             Console.WriteLine("First request started");
             Parallel.Invoke(
                 () => CallFirstTenantDb(),
@@ -17,7 +17,7 @@ namespace RealTimeSingleton
             Console.WriteLine("First request completed");
             Console.ReadLine();
 
-            //Subseaquent call
+            //Subseaquent call for both tenant db
             Console.WriteLine("Second request started");
             Parallel.Invoke(
                 () => CallFirstTenantDb(),
