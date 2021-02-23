@@ -10,44 +10,44 @@
     /// <summary>
     /// A 'ConcreteProduct' class
     /// </summary>
-    class ConcreteProductA : IProduct
+    class ProductA : IProduct
     {
     }
 
     /// <summary>
     /// A 'ConcreteProduct' class
     /// </summary>
-    class ConcreteProductB : IProduct
+    class ProductB : IProduct
     {
     }
 
     /// <summary>
     /// The 'Creator' abstract class
     /// </summary>
-    abstract class Creator
+    interface ICreator
     {
-        public abstract IProduct FactoryMethod();
+        public IProduct FactoryMethod();
     }
 
     /// <summary>
     /// A 'ConcreteCreator' class
     /// </summary>
-    class ConcreteCreatorA : Creator
+    class CreatorA : ICreator
     {
-        public override IProduct FactoryMethod()
+        public IProduct FactoryMethod()
         {
-            return new ConcreteProductA();
+            return new ProductA();
         }
     }
 
     /// <summary>
     /// A 'ConcreteCreator' class
     /// </summary>
-    class ConcreteCreatorB : Creator
+    class CreatorB : ICreator
     {
-        public override IProduct FactoryMethod()
+        public IProduct FactoryMethod()
         {
-            return new ConcreteProductB();
+            return new ProductB();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FactoryMethod;
+using System;
 
 namespace ConsoleApp1
 {
@@ -6,7 +7,22 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            while (true)
+            {
+                Console.WriteLine("Please enter creator type");
+                string productType = Console.ReadLine();
+                ICreator creator = FactoryMethod.FactoryMethod.GetCreator(productType);
+                if (creator != null)
+                {
+                    Console.WriteLine("CreatorType : " + creator.ToString());
+                    IProduct product = creator.FactoryMethod();
+                    Console.WriteLine("ProductType : " + product.ToString());
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Obstacle Type");
+                }
+            }
         }
     }
 }
