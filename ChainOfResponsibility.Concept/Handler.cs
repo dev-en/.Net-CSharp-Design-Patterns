@@ -7,31 +7,31 @@ namespace ChainOfResponsibility.Concept
     /// <summary>
     /// The 'Handler' abstract class
     /// </summary>
-    abstract class Manager
+    abstract class Handler
     {
-        protected Manager manager;
-        public void SetManager(Manager manager)
+        protected Handler handler;
+        public void SetHandler(Handler handler)
         {
-            this.manager = manager;
+            this.handler = handler;
         }
-        public abstract void ManageRequest(int request);
+        public abstract void HandleRequest(int request);
     }
 
     /// <summary>
     /// The 'ConcreteHandlerA' class
     /// </summary>
-    class ManagerA : Manager
+    class HandlerA : Handler
     {
-        public override void ManageRequest(int request)
+        public override void HandleRequest(int request)
         {
             if (request >= 0 && request < 10)
             {
                 Console.WriteLine("{0} handled request {1}",
                   this.GetType().Name, request);
             }
-            else if (manager != null)
+            else if (handler != null)
             {
-                manager.ManageRequest(request);
+                handler.HandleRequest(request);
             }
         }
     }
@@ -39,18 +39,18 @@ namespace ChainOfResponsibility.Concept
     /// <summary>
     /// The 'ConcreteHandlerB' class
     /// </summary>
-    class ManagerB : Manager
+    class HandlerB : Handler
     {
-        public override void ManageRequest(int request)
+        public override void HandleRequest(int request)
         {
             if (request >= 10 && request < 20)
             {
                 Console.WriteLine("{0} handled request {1}",
                   this.GetType().Name, request);
             }
-            else if (manager != null)
+            else if (handler != null)
             {
-                manager.ManageRequest(request);
+                handler.HandleRequest(request);
             }
         }
     }
@@ -58,18 +58,18 @@ namespace ChainOfResponsibility.Concept
     /// <summary>
     /// The 'ConcreteHandlerC' class
     /// </summary>
-    class ManagerC : Manager
+    class HandlerC : Handler
     {
-        public override void ManageRequest(int request)
+        public override void HandleRequest(int request)
         {
             if (request >= 20 && request < 30)
             {
                 Console.WriteLine("{0} handled request {1}",
                   this.GetType().Name, request);
             }
-            else if (manager != null)
+            else if (handler != null)
             {
-                manager.ManageRequest(request);
+                handler.HandleRequest(request);
             }
         }
     }

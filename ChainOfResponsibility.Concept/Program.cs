@@ -7,18 +7,18 @@ namespace ChainOfResponsibility.Concept
         static void Main(string[] args)
         {
             // Setup Chain of Responsibility
-            Manager m1 = new ManagerA();
-            Manager m2 = new ManagerB();
-            Manager m3 = new ManagerC();
-            m1.SetManager(m2);
-            m2.SetManager(m3);
+            Handler m1 = new HandlerA();
+            Handler m2 = new HandlerB();
+            Handler m3 = new HandlerC();
+            m1.SetHandler(m2);
+            m2.SetHandler(m3);
 
             // Generate and process request
             int[] requests = { 2, 5, 14, 22, 18, 3, 27, 20 };
 
             foreach (int request in requests)
             {
-                m1.ManageRequest(request);
+                m1.HandleRequest(request);
             }
 
             // Wait for user
