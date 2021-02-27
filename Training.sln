@@ -39,13 +39,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsibility.RealT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ObserverDesignPattern", "ObserverDesignPattern", "{8EAB8381-BFF6-4F23-9739-8197A70162BF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverDesignPattern.Concept", "ObserverDesignPattern.Concept\ObserverDesignPattern.Concept.csproj", "{70BCDBF5-984E-4CD3-825F-066E29FD3E17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverDesignPattern.Stock", "ObserverDesignPattern.Concept\ObserverDesignPattern.Stock.csproj", "{70BCDBF5-984E-4CD3-825F-066E29FD3E17}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverDesignPattern.Bank.Net5", "ObserverDesignPattern.Bank.Net5\ObserverDesignPattern.Bank.Net5.csproj", "{86FF6569-9EA4-43C3-B3EF-5579AE7084E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverDesignPattern.Bank", "ObserverDesignPattern.Bank\ObserverDesignPattern.Bank.csproj", "{F914ED7F-E8C4-4E01-9B04-5D4392D09C27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverDesignPattern.Bank", "ObserverDesignPattern.Bank\ObserverDesignPattern.Bank.csproj", "{F914ED7F-E8C4-4E01-9B04-5D4392D09C27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObsererDesignPattern.Basic", "ObsererDesignPattern.Basic\ObsererDesignPattern.Basic.csproj", "{55B2BF91-2437-45CC-841E-2D5A6AAADD54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObsererDesignPattern.Basic", "ObsererDesignPattern.Basic\ObsererDesignPattern.Basic.csproj", "{55B2BF91-2437-45CC-841E-2D5A6AAADD54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
