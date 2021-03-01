@@ -6,17 +6,15 @@ namespace ChainOfResponsibility.Concept
     {
         static void Main(string[] args)
         {
-            // Setup Chain of Responsibility
-            Handler<string> m1 = new HandlerA<string>();
-            Handler<string> m2 = new HandlerB<string>();
-            Handler<string> m3 = new HandlerC<string>();
-            m1.SetHandler(m2);
-            m2.SetHandler(m3);
+            Handler<string> h1 = new HandlerA<string>();
+            Handler<string> h2 = new HandlerB<string>();
+            Handler<string> h3 = new HandlerC<string>();
+            h1.SetHandler(h2);
+            h2.SetHandler(h3);
 
             string str = "ChainOfResponsinility";
-            m1.HandleRequest(str);
+            h1.HandleRequest(str);
 
-            // Wait for user
             Console.ReadKey();
         }
     }
