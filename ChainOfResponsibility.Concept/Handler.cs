@@ -7,70 +7,68 @@ namespace ChainOfResponsibility.Concept
     /// <summary>
     /// The 'Handler' abstract class
     /// </summary>
-    abstract class Handler
+    abstract class Handler<T> where T: class
     {
-        protected Handler handler;
-        public void SetHandler(Handler handler)
+        protected Handler<T> handler;
+        public void SetHandler(Handler<T> handler)
         {
             this.handler = handler;
         }
-        public abstract void HandleRequest(int request);
+        public abstract void HandleRequest(T request);
     }
 
     /// <summary>
     /// The 'ConcreteHandlerA' class
     /// </summary>
-    class HandlerA : Handler
+    class HandlerA<T> : Handler<T> where T : class
     {
-        public override void HandleRequest(int request)
+        public override void HandleRequest(T request)
         {
-            if (request >= 0 && request < 10)
-            {
-                Console.WriteLine("{0} handled request {1}",
-                  this.GetType().Name, request);
-            }
-            else if (handler != null)
+            Console.WriteLine("Started HandlerA");
+            //Do some your initial work related to this Handler
+            
+            if (handler != null)
             {
                 handler.HandleRequest(request);
             }
+            //Do some your finishing work related to this Handler
+            Console.WriteLine("Finished HandlerA");
         }
     }
 
     /// <summary>
     /// The 'ConcreteHandlerB' class
     /// </summary>
-    class HandlerB : Handler
+    class HandlerB<T> : Handler<T> where T : class
     {
-        public override void HandleRequest(int request)
+        public override void HandleRequest(T request)
         {
-            if (request >= 10 && request < 20)
-            {
-                Console.WriteLine("{0} handled request {1}",
-                  this.GetType().Name, request);
-            }
-            else if (handler != null)
+            Console.WriteLine("Started HandlerB");
+            //Do some your initial work related to this Handler
+            if (handler != null)
             {
                 handler.HandleRequest(request);
             }
+            //Do some your finishing work related to this Handler
+            Console.WriteLine("Finished HandlerB");
         }
     }
 
     /// <summary>
     /// The 'ConcreteHandlerC' class
     /// </summary>
-    class HandlerC : Handler
+    class HandlerC<T> : Handler<T> where T : class
     {
-        public override void HandleRequest(int request)
+        public override void HandleRequest(T request)
         {
-            if (request >= 20 && request < 30)
-            {
-                Console.WriteLine("{0} handled request {1}",
-                  this.GetType().Name, request);
-            }
-            else if (handler != null)
+            Console.WriteLine("Started HandlerC");
+            //Do some your initial work related to this Handler
+            if (handler != null)
             {
                 handler.HandleRequest(request);
             }
+            //Do some your finishing work related to this Handler
+            Console.WriteLine("Finished HandlerC");
         }
     }
 }
