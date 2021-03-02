@@ -10,10 +10,16 @@ namespace Facade.RealTime
             Loan loan = new Loan();
 
             // check loan eligibility
-            Customer customer = new Customer("CustomerA", 700000);
-            bool eligible = loan.IsEligible(customer, 50000);
+            Customer customerA = new Customer("CustomerA", 700000);
+            bool eligible = loan.IsEligible(customerA, 50000);
 
-            Console.WriteLine("\n" + customer.Name +
+            Console.WriteLine("\n" + customerA.Name +
+                " has been " + (eligible ? "Approved" : "Rejected"));
+
+            Customer customerB = new Customer("CustomerB", 800000);
+            eligible = loan.IsEligible(customerB, 50000);
+
+            Console.WriteLine("\n" + customerB.Name +
                 " has been " + (eligible ? "Approved" : "Rejected"));
 
             // Wait for user
