@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Facade.Concept
+namespace WithoutFacade
 {
     /// <summary>
     /// Facade Design Pattern.
@@ -12,19 +12,47 @@ namespace Facade.Concept
         /// </summary>
         public static void Main()
         {
-            Facade facade = new Facade();
+            var _one = new SubSystemOne();
+            var _two = new SubSystemTwo();
+            var _three = new SubSystemThree();
 
-            facade.MethodABC();
-            facade.MethodXYZ();
+            //job ABC
+            //This job ABC is called multiple times
+            Console.WriteLine("Job ABC");
+            _one.MethodA();
+            _two.MethodB();
+            _three.MethodC();
 
-            facade.MethodABC();
-            facade.MethodXYZ();
+            Console.WriteLine();
 
+            //job XYZ
+            //This job XYZ is called multiple times
+            Console.WriteLine("Job XYZ");
+            _one.MethodX();
+            _two.MethodY();
+            _three.MethodZ();
+
+            Console.WriteLine();
+
+            //job ABC
+            //This job ABC is called multiple times
+            Console.WriteLine("Job ABC");
+            _one.MethodA();
+            _two.MethodB();
+            _three.MethodC();
+
+            Console.WriteLine();
+
+            //job XYZ
+            //This job XYZ is called multiple times
+            Console.WriteLine("Job XYZ");
+            _one.MethodX();
+            _two.MethodY();
+            _three.MethodZ();
 
             Console.ReadKey();
         }
     }
-
 
     /// <summary>
     /// The 'Subsystem' class
@@ -71,43 +99,5 @@ namespace Facade.Concept
         {
             Console.WriteLine(" Job Z completed");
         }
-    }
-
-    /// <summary>
-    /// The 'Facade' class
-    /// </summary>
-    class Facade
-    {
-        private SubSystemOne _one;
-        private SubSystemTwo _two;
-        private SubSystemThree _three;
-
-        public Facade()
-        {
-            _one = new SubSystemOne();
-            _two = new SubSystemTwo();
-            _three = new SubSystemThree();
-        }
-
-        public void MethodABC()
-        {
-            //job ABC
-            //This job ABC is called multiple times
-            Console.WriteLine("Job ABC");
-            _one.MethodA();
-            _two.MethodB();
-            _three.MethodC();
-        }
-        public void MethodXYZ()
-        {
-            //job XYZ
-            //This job XYZ is called multiple times
-            Console.WriteLine("Job XYZ");
-            _one.MethodX();
-            _two.MethodY();
-            _three.MethodZ();
-        }
-
-       
     }
 }

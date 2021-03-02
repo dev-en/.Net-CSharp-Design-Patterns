@@ -10,7 +10,7 @@ namespace Facade.RealTime
             Loan loan = new Loan();
 
             // check loan eligibility
-            Customer customer = new Customer("CustomerA");
+            Customer customer = new Customer("CustomerA", 700000);
             bool eligible = loan.IsEligible(customer, 50000);
 
             Console.WriteLine("\n" + customer.Name +
@@ -28,6 +28,12 @@ namespace Facade.RealTime
             Console.WriteLine("Bank details verified for " + c.Name);
             return true;
         }
+
+        public bool CheckBalance(Customer c)
+        {
+            Console.WriteLine("Your account balance is " + c.Balance);
+            return true;
+        }
     }
 
     class Credit
@@ -35,6 +41,11 @@ namespace Facade.RealTime
         public bool CheckCreditScore(Customer c)
         {
             Console.WriteLine("credit score verified for " + c.Name);
+            return true;
+        }
+
+        public bool CheckCreditDetails(Customer c)
+        {
             return true;
         }
     }
@@ -57,11 +68,13 @@ namespace Facade.RealTime
     class Customer
     {
         private string _name;
+        private int _balance;
 
         // Constructor
-        public Customer(string name)
+        public Customer(string name, int balance)
         {
             _name = name;
+            _balance = balance;
         }
 
         // Gets the name
@@ -69,6 +82,11 @@ namespace Facade.RealTime
         public string Name
         {
             get { return _name; }
+        }
+
+        public int Balance
+        {
+            get { return _balance; }
         }
     }
 
