@@ -59,6 +59,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter.Basic", "Adapter.Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithoutFacade", "WithoutFacade\WithoutFacade.csproj", "{817D1CA6-8A46-489B-961A-D2FC983B2FF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter.RealTime", "Adapter.RealTime\Adapter.RealTime.csproj", "{96EB9AD7-EF17-4DA6-A5B1-6EE5E77808E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -149,6 +151,10 @@ Global
 		{817D1CA6-8A46-489B-961A-D2FC983B2FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{817D1CA6-8A46-489B-961A-D2FC983B2FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{817D1CA6-8A46-489B-961A-D2FC983B2FF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96EB9AD7-EF17-4DA6-A5B1-6EE5E77808E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96EB9AD7-EF17-4DA6-A5B1-6EE5E77808E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96EB9AD7-EF17-4DA6-A5B1-6EE5E77808E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96EB9AD7-EF17-4DA6-A5B1-6EE5E77808E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -175,6 +181,7 @@ Global
 		{C9260F88-EC9C-4386-B1F7-1302AD3B83D0} = {CA3EF97D-5BDC-489D-9C00-5CA9887CC6D3}
 		{EFFF4FD8-993E-4411-96F9-1D4BDE45F24D} = {57A8EDE7-FBF1-43B4-A71A-D6F4F51AB4DF}
 		{817D1CA6-8A46-489B-961A-D2FC983B2FF8} = {CA3EF97D-5BDC-489D-9C00-5CA9887CC6D3}
+		{96EB9AD7-EF17-4DA6-A5B1-6EE5E77808E0} = {57A8EDE7-FBF1-43B4-A71A-D6F4F51AB4DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2617221-1A5D-4C31-B2EB-90405DFCC423}
